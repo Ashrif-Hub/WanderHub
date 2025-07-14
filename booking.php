@@ -118,6 +118,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     top: 0;
     width: 100%;
     z-index: 1000;
+    height:70px;
+    
    
 }
 
@@ -160,6 +162,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     background: orange;
     color: white;
     border: none;
+}
+.book {
+  padding: 60px 0;
+  padding-top: 100px; 
 }
 
 
