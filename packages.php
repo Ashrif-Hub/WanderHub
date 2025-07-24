@@ -102,7 +102,7 @@ $result = $mysqli->query($sql);
                 ?>
             </div>
             <div class="price">Price: <span>$<?php echo $row['price']; ?></span></div>
-            <a href="booking.php" class="btn">Book Now</a>
+            <a href="booking.php?destination=<?php echo urlencode($row['name']); ?>" class="btn">Book Now</a>
         </div>
     </div>
     <?php endwhile; ?>
