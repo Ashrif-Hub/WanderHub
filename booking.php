@@ -36,6 +36,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn->close();
 }
 ?>
+<?php
+$destination = isset($_GET['destination']) ? $_GET['destination'] : '';
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -194,7 +197,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="col-md-6 py-3">
           <form action="" method="POST">
 
-            <input type="text" class="form-control mb-3" name="destination" placeholder="Where To" required>
+            <input type="text" class="form-control mb-3" name="destination" placeholder="Where To" value="<?php echo htmlspecialchars($destination); ?>" required>
             <input type="text" class="form-control mb-3" name="howMany" placeholder="How Many People" required>
             <input type="email" class="form-control mb-3" name="email" placeholder="Enter Your Email" required>
             <input type="date" class="form-control mb-3" name="startDate" required>
